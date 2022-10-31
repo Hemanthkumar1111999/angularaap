@@ -8,6 +8,11 @@ LABEL maintainer "hemanthkumarreddy8686@gmail.com"
 RUN npm install
 
 RUN mkdir -p /usr/src/app
+
+WORKDIR  /usr/src/app
+
+COPY . .
+
 # set a health check
 HEALTHCHECK --interval=5s \
             --timeout=5s \
