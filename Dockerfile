@@ -5,6 +5,9 @@ FROM node:7-onbuild
 # set maintainer
 LABEL maintainer "hemanthkumarreddy8686@gmail.com"
 
+RUN npm install
+
+RUN mkdir -p /usr/src/app
 # set a health check
 HEALTHCHECK --interval=5s \
             --timeout=5s \
